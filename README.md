@@ -1,5 +1,5 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+# Building a Web-Based Movie Review Generator Database with Generative AI, HTML, CSS, and PHP
+This is the repository for the LinkedIn Learning course Building a Web-Based Movie Review Generator Database with Generative AI, HTML, CSS, and PHP. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
