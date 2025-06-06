@@ -1,0 +1,18 @@
+/* /assets/css/style.css */
+
+body {
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.card-title {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.card-text a {
+	color: #0d6efd;
+}
+
+footer {
+	background-color: #f8f9fa;
+}
