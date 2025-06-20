@@ -18,7 +18,7 @@
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"GitHub.github-vscode-theme",
+				"linkedinlearning.linkedinlearning-vscode-theme",
 				"mtxr.sqltools",
 				"mtxr.sqltools-driver-mysql"
 				// Additional Extensions Here
@@ -31,15 +31,28 @@
 	// DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
+
+	// Start the PHP web server.
+	"postStartCommand": "php -S localhost:8080",
+	// Alternate: Start the Apache webserver.
+	// "postStartCommand": "apachectl start", 
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
 		8080,
 		3306
 	],
+
+	"portsAttributes": {
+		"8080": {
+			"label": "php-server"
+		},
+		"3306": {
+			"label": "mariadb"
+		}
+	},
+
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html && sudo sh .devcontainer/startup.sh"
-	// Configure tool-specific properties.
-	// "customizations": {},
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	
 }
